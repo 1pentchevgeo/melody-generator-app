@@ -1,0 +1,40 @@
+<MyGrid>:
+    melody: melody
+    harmony: harmony
+    length: length
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+
+        TextInput:
+            id: melody
+            text: "Press \"New Melody\" to generate a new melody!"
+            text_size: root.width
+            halign: "center"
+            valign: "middle"
+
+        Label:
+            id: harmony
+            text: "Press \"New Harmony\" to generate a new harmony for the given melody!"
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Number of notes:"
+                halign: "right"
+
+            TextInput:
+                id: length
+                text: "4"
+                multiline: False
+
+        Button:
+            text: "New Melody"
+            on_press: root.mel()
+
+        Button:
+            text: "New Harmony"
+            on_press: root.har()
